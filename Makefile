@@ -1,12 +1,12 @@
 EXE=json_parser_tests
 OBJS=json_parser_tests.o json_parser.o gmock-all.o gtest-all.o
 
-GMOCK_ROOT=gmock-1.7.0
-GTEST_ROOT=$(GMOCK_ROOT)/gtest
-GTEST_CXXFLAGS=-I$(GTEST_ROOT) -I$(GTEST_ROOT)/include
-GTEST_LDFLAGS=-pthread
-GMOCK_CXXFLAGS=-I$(GMOCK_ROOT) -I$(GMOCK_ROOT)/include $(GTEST_CXXFLAGS)
-GMOCK_LDFLAGS=$(GTEST_LDFLAGS)
+GMOCK_ROOT ?= gmock-1.7.0
+GTEST_ROOT ?= $(GMOCK_ROOT)/gtest
+GTEST_CXXFLAGS = -I$(GTEST_ROOT) -I$(GTEST_ROOT)/include
+GTEST_LDFLAGS = -pthread
+GMOCK_CXXFLAGS = -I$(GMOCK_ROOT) -I$(GMOCK_ROOT)/include $(GTEST_CXXFLAGS)
+GMOCK_LDFLAGS = $(GTEST_LDFLAGS)
 
 .PHONY : tests
 
