@@ -1,0 +1,4 @@
+*~
+*.o
+json_parser_tests
+gmock-1.7.0
